@@ -8,7 +8,7 @@ public class CustomerMain {
         System.out.println(nancy);
         System.out.println(peter.checkPin("1234"));
         //หลังจากมีการสร้างคลาสแบงค์มาแล้ว จะทำการกำหนดแบงค์ขึ้นมา แล้วเพิ่ม customer ใน bank
-        Bank bank = new Bank("My Bank");
+        Bank bank = new Bank("My Bank",new WebServiceDataSource());
         bank.addCustomer(peter);
         bank.addCustomer(nancy);
         System.out.println(bank);

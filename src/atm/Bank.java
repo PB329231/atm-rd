@@ -5,12 +5,16 @@ import java.util.ArrayList;
 public class Bank {
     private String name;
     private ArrayList<Customer> customers;
-    private DatabaseDataSource dataSource;
+//    private DatabaseDataSource dataSource;
+//    private WebServiceDataSource dataSource;
+    private Datasource datasource;
 
-    public Bank(String name) {
+    public Bank(String name, Datasource dataSource) {
         this.name = name;
 //        this.customers = new ArrayList<>();
-        this.dataSource = new DatabaseDataSource();
+//        this.dataSource = new DatabaseDataSource();
+//        this.dataSource = new WebServiceDataSource();
+        this.datasource = dataSource;
         this.customers = dataSource.getCustomerData();
     }
 
