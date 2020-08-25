@@ -6,7 +6,7 @@ public class Customer {
     private int id;
     private String name;
     private  String pin;
-    //1.2 composition : "Has-A" relationship
+    //1.2 composition : "Has-A" relationship เป็นการสัมพันธ์ระหว่างคลาสแบบการมี
     private BankAccount account;
 
     public Customer(int id, String name, String pin) {
@@ -14,6 +14,16 @@ public class Customer {
         this.name = name;
         this.pin = pin;
         this.account = new BankAccount(id,name,"Saving");
+    }
+
+    public boolean checkPin(String pin){
+
+        if (this.pin.equals(pin))
+            return true;
+        else
+            return false;
+//ให้ค่า return ออกมาเหมือนกันกับข้างบน แต่เป็นการเขียนแบบสั้น
+//        return this.pin.equals(pin);
     }
 
     public int getId() {
