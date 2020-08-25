@@ -11,6 +11,7 @@ public class CustomerMain {
         Bank bank = new Bank("My Bank");
         bank.addCustomer(peter);
         bank.addCustomer(nancy);
+        System.out.println(bank);
 
         //composition การเชื่อมกันของคลาส
 //        Customer c1 = bank.findCustomer(1);
